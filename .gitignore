@@ -1,0 +1,22 @@
+# Python
+*.py[cod]
+__pycache__
+venv/
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.mypy_cache/
+
+# Node/npm
+node_modules
+
+# Editors
+.vscode
+*.code-workspace
+.idea
+*.swp
+*~
+
+# Misc
+.DS_Store
