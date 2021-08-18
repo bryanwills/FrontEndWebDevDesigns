@@ -1,0 +1,164 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background: url("http://yoannbraie.fr/commons/pics/pattern_ordi.jpg")
+    no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 90%;
+  max-width: 90%;
+  padding: 0;
+  margin: 0 auto;
+  transition: all 0.3s;
+}
+.xbox_cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(27, 140, 27, 0.6);
+  z-index: 1;
+}
+main {
+  width: 90vw;
+  height: 90vh;
+  display: table-cell;
+  vertical-align: middle;
+}
+.xbox_x {
+  z-index: 2;
+  position: relative;
+}
+.xbox_x > .top {
+  width: 22.346vw;
+  height: 5.8vh;
+  background-color: #2b2b2b;
+  margin: auto;
+}
+.xbox_x > .top > img {
+  height: 100%;
+  transform: scale(0.4);
+  float: right;
+  -webkit-animation: come_on 1.5s linear infinite;
+  transform: translateX(10px);
+}
+.xbox_x > .mid {
+  width: 21.272vw;
+  height: 0.8285vh;
+  background-color: black;
+  margin: auto;
+  transform: translateX(12px);
+}
+.xbox_x > .bot {
+  width: 21.48689299vw;
+  height: 2.3198vh;
+  background-color: #232323;
+  margin: auto;
+  transform: translateX(10px);
+}
+.xbox_x > .bot > div {
+  width: 0.5vw;
+  height: 1vh;
+  background-color: black;
+  display: inline-block;
+  margin: 8px 3px;
+  position: relative;
+}
+.xbox_x > .bot > div:nth-child(1) {
+  border-radius: 50%;
+  margin-left: 0.43vw;
+  background-color: #232323;
+  border: 1px solid black;
+  width: 10px;
+  height: 10px;
+}
+.xbox_x > .bot > div:nth-child(2) {
+  border-radius: 10px;
+  margin-left: 5px;
+  background-color: black;
+  width: 30px;
+  height: 12px;
+}
+.xbox_x > .bot > div:nth-child(3) {
+  background-color: transparent;
+  margin-left: 320px;
+  width: 12px;
+  height: 12px;
+  font-size: 8px;
+  transform: translateY(-12px) translateX(5px);
+}
+.xbox_x > .bot > div:nth-child(4) {
+  border-radius: 50%;
+  margin-left: 0px;
+  background-color: #232323;
+  border: 1px solid black;
+  width: 10px;
+  height: 10px;
+  transform: translate(-12px, -2.65vh);
+}
+.xbox_x > .bot > div:nth-child(5) {
+  position: relative;
+  border-radius: 1px;
+  background-color: black;
+  width: 30px;
+  height: 12px;
+  transform: translate(350px, -6.45vh);
+}
+
+.xbox_x > .bot > div:nth-child(5)::after {
+  content: "";
+  display: flex;
+  position: relative;
+  width: 10px;
+  height: 2px;
+  background-color: #232323;
+  left: 5px;
+  width: 20px;
+  top: 3px;
+  transform: translate(1px, 0vh);
+}
+/*
+.xbox_x > .bot > div:nth-child(6) {
+  border-radius: 1px;
+  background-color: black;
+  width: 30px;
+  height: 12px;
+  margin-left: 27.3vw;
+  margin-bottom: 40vh;
+}
+
+.xbox_x > .bot > div:nth-child(6)::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #232323;
+  left: 5px;
+  width: 20px;
+  top: 3px;
+  margin-top: 10vh;
+  margin-left: 1.6vw;
+} */
+
+h1 {
+  color: white;
+  text-align: center;
+  transform: translateY(50px);
+  position: relative;
+  z-index: 3;
+  font-weight: 100;
+}
+
+@keyframes come_on {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
