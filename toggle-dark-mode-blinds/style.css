@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+body {
+  background-color: #eee;
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+body {
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+#store {
+  background-color: rgb(23, 23, 23);
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+  grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+  transition: all 2s;
+  transition-timing-function: ease;
+}
+#store.closed {
+  top: 0;
+}
+#store.opened {
+  top: calc(-100vh + 20px);
+}
+main {
+  position: relative;
+  z-index: 2;
+}
+.brillant {
+  width: 80%;
+  height: 1px;
+  background-color: rgb(43, 43, 43);
+  margin: auto;
+  display: block;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(171, 171, 171, 1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(171, 171, 171, 1);
+  box-shadow: 0px 0px 10px 0px rgba(171, 171, 171, 1);
+}
+
+#boucle {
+  position: absolute;
+  width: 1px;
+  background-color: rgb(23, 23, 23);
+  height: 20vh;
+  left: calc(50vw);
+  cursor: pointer;
+  transform-origin: top;
+  transition: all 2s;
+  transition-timing-function: ease-out;
+  z-index: 3;
+}
+
+#boucle::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #dbb97b;
+  border-radius: 50%;
+  top: 20vh;
+  left: -55px;
+}
+#boucle::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  background-color: rgb(23, 23, 23);
+  height: 5px;
+  bottom: -5px;
+  left: -5px;
+}
+
+#boucle.opened {
+  -webkit-animation: rotateLoop 3s infinite;
+  -moz-animation: rotateLoop 3s infinite;
+  -o-animation: rotateLoop 3s infinite;
+  animation: rotateLoop 3s infinite;
+  transform-origin: top;
+  top: 0px;
+}
+
+#boucle.closed {
+  transform: rotate(00deg);
+  top: 100vh;
+}
+
+#boucle.reopen {
+  transform: rotate(-180deg);
+  top: 120vh;
+}
+
+#tTitle {
+  transition: all 0.5s;
+}
+
+#tTitle.opened {
+  color: #063d4b;
+}
+
+#tTitle.closed {
+  color: #fff;
+}
+
+@keyframes rotateLoop {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
