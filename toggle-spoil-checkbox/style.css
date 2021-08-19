@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: #f17269;
+  font-family: "Cutive Mono", monospace;
+  font-size: 16px;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.box {
+  --shadow-values: 0px 28px 69px -2px rgb(80 80 80 / 49%);
+  max-width: 500px;
+  width: 80%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: var(--shadow-values);
+  -webkit-box-shadow: var(--shadow-values);
+  -moz-box-shadow: var(--shadow-values);
+}
+
+.box > p {
+  margin: 0px;
+  font-weight: bold;
+}
+
+.box > p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.spoiler > b {
+  display: inline-block;
+  width: 10px;
+  height: 17px;
+  position: relative;
+  vertical-align: text-bottom;
+}
+
+.spoiler > b > i,
+.spoiler > b > em {
+  position: absolute;
+  transition: transform 0.1s, opacity 0.1s;
+  top: 0px;
+  font-style: normal;
+}
+
+.spoiler > b.active > i {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+
+.spoiler > b.active > em {
+  transform: translateX(0px) translateY(3px);
+  opacity: 1;
+}
+
+.spoiler > b:not(.active) > i {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.spoiler > b:not(.active) > em {
+  transform: translateX(10px) translateY(3px);
+  opacity: 0;
+}
+
+.commands {
+  padding: 20px;
+}

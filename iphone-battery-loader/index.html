@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>iPhone Battery Loader</title>
+  </head>
+  <body>
+      <main>
+  <div class="container">
+    <div class="device">
+      <div class="exterieur">
+        <div class="button-shutdown"></div>
+        <div class="button-vol-mute"></div>
+        <div class="button-vol-plus"></div>
+        <div class="button-vol-moins"></div>
+      </div>
+      <div class="interieur">
+        <div class="screen top-screen">
+          <div class="camera"></div>
+          <div class="microphone"></div>
+          <div class="microphone-bar"></div>
+        </div>
+        <div class="screen middle-screen">
+          <div class="battery">
+            <span></span>
+            <div id="battery-div"></div>
+            <label id="chargeValue">0%</label>
+          </div>
+        </div>
+      </div>
+      <div class="screen bottom-screen">
+        <button></button>
+      </div>
+    </div>
+    <div class="plug" id="plug">
+    </div>
+  </div>
+  </div>
+</main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

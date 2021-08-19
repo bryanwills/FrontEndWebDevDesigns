@@ -1,0 +1,115 @@
+* {
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+}
+a,
+a:visited,
+a::before {
+  color: black;
+}
+
+a:hover {
+  color: red;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background-color: #bdd1da;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+@keyframes branch_move_left {
+  from {
+    opacity: 0;
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+    opacity: 1;
+  }
+}
+@keyframes branch_move_top {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+
+  to {
+    opacity: 1;
+    top: 50%;
+  }
+}
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes heart_rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(225deg);
+  }
+}
+main {
+  display: table-cell;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  vertical-align: middle;
+}
+.heart {
+  display: block;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  -webkit-animation: heart_rotate 0.7s forwards 0s;
+  animation: heart_rotate 0.7s forwards 0s;
+}
+
+.heart > div {
+  position: absolute;
+  background-color: red;
+}
+.structure {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: scale 0.5s forwards 0s;
+  animation: scale 0.5s forwards 0s;
+}
+.branch {
+  opacity: 0;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.branch:nth-child(2) {
+  -webkit-animation: branch_move_left 0.5s forwards 0.2s;
+  animation: branch_move_left 0.5s forwards 0.5s;
+}
+.branch:nth-child(3) {
+  -webkit-animation: branch_move_top 0.5s forwards 0.2s;
+  animation: branch_move_top 0.5s forwards 0.5s;
+}
+.inspire {
+  text-align: center;
+  justify-content: center;
+  background-color: white;
+  padding: 30px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.inspire a {
+  text-decoration: none;
+}

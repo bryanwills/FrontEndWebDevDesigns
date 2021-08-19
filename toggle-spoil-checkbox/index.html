@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Toggle Spoiler Checkbox</title>
+  </head>
+  <body>
+    <main>
+      <div class="box">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          <span class="spoiler"
+            >Fuga quidem rem provident itaque sequi architecto animi optio</span
+          >
+          expedita ut iusto!
+        </p>
+        <p>
+          Dolorum voluptas reiciendis nisi
+          <span class="spoiler"
+            >quo eius totam cumque ad atque voluptatum nulla</span
+          >
+          laborum dolores aliquid vel quasi soluta iusto, molestiae eaque,
+          inventore dolore magnam. Alias, fugit nobis distinctio maxime eaque
+          quasi aperiam! Quaerat voluptates quod minus neque ipsa necessitatibus
+          ad possimus pariatur.
+        </p>
+        <p>
+          Tenetur obcaecati optio
+          <span class="spoiler">voluptas, rem id ratione</span> sit nam dolorem
+          rerum itaque.
+        </p>
+      </div>
+      <div class="commands">
+        <input
+          type="checkbox"
+          id="toggleSpoil"
+          name="toggle"
+          value="toggleSpoil"
+          onchange="toggleSpoil()"
+        />
+        <label id="toggleSpoilLabel" for="toggleSpoil">Hide spoil</label>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

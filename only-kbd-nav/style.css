@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  background: url("http://www.yoannbraie.fr/img/clavier.jpg") no-repeat center
+    center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
+  background-color: rgba(1, 1, 1, 0.8);
+}
+.keynav_layout {
+  display: flex;
+  align-content: flex-start;
+  flex-flow: row wrap;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  padding: 10px 5px;
+  overflow: hidden;
+}
+
+.keynav_layout > div {
+  background-color: #212121;
+  width: 25%;
+  height: 25%;
+  transform: scale(0.95);
+  margin-top: 10px;
+  border-radius: 1px;
+  padding: 20px;
+  font-size: 25px;
+  color: #464646;
+}
+
+.keynav_layout > div.focused {
+  background-color: #03a9f4;
+  color: #0894d4;
+  animation: rebondir 0.2s linear forwards;
+}
+
+.keynav_layout > div > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.keynav_layout > div > div > div {
+  color: white;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 25vw;
+  font-size: 18px;
+  height: 24vh;
+  text-transform: uppercase;
+}
+
+@media all and (max-width: 750px) {
+  .title {
+    font-size: 12px !important;
+  }
+}
+@keyframes rebondir {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(1, 1, 1, 0.85);
+  z-index: 9;
+  color: white;
+  cursor: pointer;
+}
+.cover > div {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 6vw;
+}

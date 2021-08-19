@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap&family=Press+Start+2P&display=swap&family=Electrolize&display=swap");
+* {
+  font-family: "Electrolize", sans-serif;
+}
+
+:root {
+  --yellow-color: #dab955;
+  --xbox-yellow-color: #e8d907;
+  --xbox-green-color: #6bbb36;
+  --xbox-red-color: #ff4343;
+  --xbox-blue-color: #0098e6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Press Start 2P", cursive;
+}
+
+h1 {
+  padding: 5px 0px;
+  font-size: 1.4em;
+}
+
+h1::before {
+  --pixel-size: 10px;
+  content: "";
+  display: block;
+  float: left;
+  transform: translateY(calc(var(--pixel-size) / 2));
+  width: var(--pixel-size);
+  height: var(--pixel-size);
+  background-color: var(--xbox-blue-color);
+  box-shadow: var(--pixel-size) var(--pixel-size) var(--xbox-green-color),
+    calc(var(--pixel-size) * 2) 0px var(--xbox-red-color),
+    var(--pixel-size) calc(0px - var(--pixel-size)) var(--xbox-yellow-color);
+  margin-right: calc(var(--pixel-size) * 3);
+}
+
+h2 {
+  font-size: 0.8em;
+  margin: 30px 0 30px 0;
+}
+
+h2::after {
+  --pixel-size: 10px;
+  content: "";
+  display: block;
+  transform: translateY(calc(var(--pixel-size) / 2));
+  width: var(--pixel-size);
+  height: var(--pixel-size);
+  background-color: black;
+  box-shadow: calc(var(--pixel-size) * 2) 0px grey,
+    calc(var(--pixel-size) * 4) 0px lightgray;
+  margin-right: calc(var(--pixel-size) * 3);
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--yellow-color);
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--yellow-color);
+}
+
+#magazine {
+  --recipe-height: 720px;
+  --recipe-ratio: 1.4;
+  width: calc(var(--recipe-height) / var(--recipe-ratio));
+  height: var(--recipe-height);
+  box-sizing: border-box;
+  padding: 10px 40px;
+  margin: auto;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 3px;
+  position: relative;
+}
+
+#magazine::-webkit-scrollbar {
+  display: none;
+}
+
+#magazine {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+figure > figcaption {
+  display: none;
+}
+
+figure {
+  height: 200px;
+  margin: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: lightgray;
+}
+
+.button {
+  border: none;
+  font-size: 1em;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--yellow-color);
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #c5a74c;
+}
+
+.button.hidden {
+  display: none;
+}
+
+.fullscreen {
+  margin: 20px;
+}
+
+@media (max-height: 700px) {
+  main {
+    display: block;
+    padding: 20px;
+  }
+}
+
+.zone-fullscreen {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.zone-fullscreen > .button {
+  background-color: white;
+  color: black;
+}
+
+.article-meta {
+  display: flex;
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  margin-top: 20px;
+}
+
+.article-meta > div {
+  padding: 0 20px;
+}
+
+.article-meta > svg {
+  --author-avatar-size: 50px;
+  width: var(--author-avatar-size);
+  height: var(--author-avatar-size);
+}
+
+.article-meta > div > p {
+  margin: 0;
+  font-size: 0.7em;
+}
+
+.page p {
+  color: #6b6b6b;
+}
+
+.article-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.8em;
+  align-items: center;
+}
+
+.article-pagination > button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.article-pagination > button.hidden {
+  opacity: 0;
+  cursor: initial;
+}
+
+.page {
+  transition: transform 0.3s;
+}
+
+.page.active.right {
+  animation: comeOnRight 0.5s linear forwards;
+}
+
+.page.active.left {
+  animation: comeOnLeft 0.5s linear forwards;
+}
+
+.page:not(.active) {
+  animation: comeOut 0.2s linear forwards;
+  display: none;
+}
+
+@keyframes comeOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+}
+
+@keyframes comeOnRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-20px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes comeOnLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(20px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
