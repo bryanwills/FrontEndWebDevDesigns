@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+body {
+  background-color: #b3ccd7;
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+body {
+  background-color: #489dbf;
+  font-family: "Arial";
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* start iPhone construction */
+
+.device {
+  width: 300px;
+  height: 600px;
+  background-color: #f5f6f8;
+  border: 4px solid #d0d2d1;
+  margin: auto;
+  border-radius: 32px;
+  position: relative;
+  padding: 15px;
+}
+
+.screen {
+  width: 100%;
+}
+
+.top-screen {
+  height: 45px;
+}
+
+.camera,
+.microphone,
+.microphone-bar {
+  border-radius: 50%;
+  margin: auto;
+  background: #ffffff;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #d7d7d7;
+}
+
+.camera {
+  width: 10px;
+  height: 10px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.microphone {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+}
+
+.microphone-bar {
+  width: 60px;
+  height: 8px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.middle-screen {
+  height: 500px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #c4c4c4;
+  background-color: #fafafa;
+  border-radius: 3px;
+  padding: 0px;
+  overflow-y: auto;
+  text-align: left;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.interieur {
+  height: 100%;
+}
+
+.bottom-screen {
+  height: 45px;
+  display: table-cell;
+  vertical-align: middle;
+  height: 60px;
+  width: 300px;
+}
+
+.bottom-screen > button {
+  padding: 18px;
+  border-radius: 50%;
+  outline: none;
+  background: #ffffff;
+  border: 3px solid #eee;
+}
+
+.exterieur {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.button-shutdown {
+  width: 40px;
+  height: 3px;
+  float: right;
+  background-color: #f5f6f8;
+  margin-right: 34px;
+  transform: translateY(-7px);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.button-vol-mute {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #f5f6f8;
+  height: 34px;
+  width: 4px;
+  transform: translateX(-7px) translateY(59px);
+}
+
+.button-vol-plus {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #f5f6f8;
+  height: 24px;
+  width: 4px;
+  transform: translateX(-7px) translateY(79px);
+}
+
+.button-vol-moins {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #f5f6f8;
+  height: 24px;
+  width: 4px;
+  transform: translateX(-7px) translateY(90px);
+}
+
+@media all and (max-width: 800px) {
+  .device {
+    transform: scale(0.7);
+  }
+}
+
+/* end iPhone construction */
+
+#loadingScreen {
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #262626;
+  transition: all 0.3s;
+}
+
+#loadingScreen.hide {
+  transform: translateX(300px);
+}
+
+#loadingScreen.erase {
+  display: none;
+}
+
+#loadingScreen > i {
+  color: white;
+  font-size: 66px;
+}
+
+#loadingBar {
+  width: 70%;
+  height: 4px;
+  background-color: #4c4c4c;
+  border-radius: 10px;
+  position: relative;
+}
+
+#loadingBar::after {
+  border-radius: 10px;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0%;
+  background-color: white;
+  transition: all 2s;
+}
+
+#loadingBar.load::after {
+  width: 100%;
+}
+
+.article {
+  width: calc(100% - 20px);
+  display: block;
+  background-color: white;
+  margin: 15px 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 20px 0px rgba(150, 150, 150, 1);
+  -moz-box-shadow: 0px 2px 20px 0px rgba(150, 150, 150, 1);
+  box-shadow: 0px 2px 20px 0px rgba(150, 150, 150, 1);
+  position: relative;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.article.show {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.article > img,
+#articleCard > img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+  height: 150px;
+}
+
+.article > div {
+  padding: 6px;
+}
+
+.article > div > label {
+  color: black;
+  font-size: 14px;
+}
+
+.article > div > p {
+  margin: 0;
+  color: grey;
+  font-size: 12px;
+}
+
+#articleFlou {
+  position: absolute;
+  z-index: 2;
+  left: 300px;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(1, 1, 1, 0.9);
+  transition: all 0.3s;
+}
+
+#articleFlou.show {
+  left: 0px;
+}
+
+#articleCard {
+  position: absolute;
+  z-index: 2;
+  left: 300px;
+  top: 30px;
+  bottom: 60px;
+  width: calc(100% - 40px);
+  background-color: white;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+#articleCard > label {
+  font-size: 16px;
+  margin: 0;
+  padding: 10px;
+  padding-bottom: 0px !important;
+  color: black;
+  display: block;
+}
+
+#articleCard > p {
+  font-size: 14px;
+  margin: 0;
+  padding: 10px;
+  color: grey;
+}
+
+#articleCard.show {
+  left: 20px;
+}
+
+#closeArticle {
+  position: absolute;
+  z-index: 2;
+  right: -40px;
+  top: 10px;
+  background-color: rgb(173, 0, 0);
+  border-radius: 50% !important;
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+#closeArticle.show {
+  right: 5px;
+}
+
+.noScroll {
+  overflow: hidden !important;
+}
+
+@media all and (max-height: 700px) {
+  .device {
+    transform: scale(0.7);
+  }
+}

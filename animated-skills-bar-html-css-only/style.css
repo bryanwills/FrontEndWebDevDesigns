@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #0a7aca;
+}
+
+.wrapper {
+  width: 40%;
+  min-width: 590px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.container {
+  width: 100%;
+  padding: 30px 30px 50px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.container * {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  font-weight: 500;
+}
+
+h2 {
+  margin-bottom: 50px;
+  letter-spacing: 0px;
+  text-align: center;
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bar {
+    position: relative;
+    border: 2px solid #0d96e0;
+    border-radius: 20px;
+}
+
+.bar div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background-color: #0d96e0;
+}
+
+.skills:not(:last-child){
+    margin-bottom: 30px;
+}
+
+#html-bar {
+    animation: html-fill 2s forwards;
+}
+
+@keyframes html-fill {
+    100%{
+        width: 90%;
+    }
+}
+
+#css-bar {
+    animation: css-fill 2s forwards;
+}
+
+@keyframes css-fill {
+    100%{
+        width: 75%;
+    }
+}
+
+#javascript-bar {
+    animation: javascript-fill 2s forwards;
+}
+
+@keyframes javascript-fill {
+    100%{
+        width: 50%;
+    }
+}
+
+#python-bar {
+    animation: python-fill 2s forwards;
+}
+
+@keyframes python-fill {
+    100%{
+        width: 60%;
+    }
+}

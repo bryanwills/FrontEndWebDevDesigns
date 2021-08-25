@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  background-color: #eee;
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.loader,
+.loader-content {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  transform: translateX(25px);
+}
+.loader-content {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+}
+.branche {
+  width: 50px;
+  height: 10px;
+  position: absolute;
+  left: 0;
+  transform-origin: right;
+  transition: all 0.5s;
+}
+.branche > div {
+  border-radius: 10px;
+  width: 17px;
+  background-color: white;
+  height: 30px;
+}
+.branche:nth-child(1) {
+  transform: rotate(0deg);
+}
+.branche:nth-child(2) {
+  transform: rotate(45deg);
+}
+.branche:nth-child(3) {
+  transform: rotate(90deg);
+}
+.branche:nth-child(4) {
+  transform: rotate(135deg);
+}
+.branche:nth-child(5) {
+  transform: rotate(180deg);
+}
+.branche:nth-child(6) {
+  transform: rotate(225deg);
+}
+.branche:nth-child(7) {
+  transform: rotate(270deg);
+}
+.branche:nth-child(8) {
+  transform: rotate(315deg);
+}
+
+.branche > div {
+  transform: rotate(65deg);
+  position: relative;
+}
+
+.branche > div > div {
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0%;
+  transition: all 0.2s;
+}

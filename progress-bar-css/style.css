@@ -1,0 +1,192 @@
+.container {
+  background-color: rgba(0, 0, 0.1);
+  border-radius: 9999px;
+}
+
+.container__progress {
+  /* Center the content */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  background-color: #357edd;
+  color: #fff;
+  border-radius: 9999px;
+}
+
+:root {
+  --background-color: #e7d900;
+  --color-blue-6: #2563eb;
+  --color-gray-2: #e5e7eb;
+  --color-gray-5: #6b7280;
+  --color-gray-8: #27272a;
+  --color-gray-9: #111827;
+}
+body {
+  font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-5);
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 0.5rem;
+}
+
+/* Layout */
+.container {
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 0 1rem;
+}
+.main {
+  flex: 1;
+  overflow: hidden;
+  padding: 4rem 0;
+}
+.sidebar {
+  display: none;
+  padding: 4rem 0;
+}
+
+/* Sidebar */
+.sidebar__inner {
+  position: sticky;
+  top: 1rem;
+}
+
+/* Hero */
+.hero {
+  --current-background-color: var(--background-color);
+  background: var(--background-color);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+.hero__logo {
+  display: flex;
+  justify-content: center;
+}
+.hero__logo img {
+  object-fit: cover;
+  width: 16rem;
+}
+.hero__heading {
+  color: var(--color-gray-9);
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero__subheading {
+  color: var(--color-gray-9);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/*
+Prism theme
+Credit to https://github.com/tailwindlabs/tailwindcss.com/blob/master/src/css/prism.css
+*/
+pre {
+  background: var(--color-gray-8);
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+  color: #fff;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0px;
+  overflow-x: auto;
+  padding: 1rem;
+  white-space: pre;
+}
+
+.token.tag,
+.token.class-name,
+.token.selector,
+.token.selector .class,
+.token.function {
+  color: #e879f9;
+}
+
+.token.attr-name,
+.token.keyword,
+.token.rule,
+.token.operator,
+.token.pseudo-class,
+.token.important {
+  color: #22d3ee;
+}
+
+.token.attr-value,
+.token.class,
+.token.string,
+.token.number,
+.token.unit,
+.token.color {
+  color: #bef264;
+}
+
+.token.punctuation,
+.token.module,
+.token.property {
+  color: #bae6fd;
+}
+
+.token.atapply .token:not(.rule):not(.important) {
+  color: inherit;
+}
+
+.language-shell .token:not(.comment) {
+  color: inherit;
+}
+
+.language-css .token.function {
+  color: inherit;
+}
+
+.token.comment {
+  color: #a1a1aa;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .content {
+    display: flex;
+  }
+  .sidebar {
+    display: block;
+    flex: 0 0 8rem;
+    margin-left: 0.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .sidebar {
+    flex-basis: 12rem;
+    margin-left: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .sidebar {
+    flex-basis: 16rem;
+    margin-left: 2rem;
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>iPhone Article App JS Vanilla</title>
+  </head>
+  <body>
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <a
+      id="fs_app"
+      style="
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0;
+        text-decoration: none;
+        position: fixed;
+        bottom: 0;
+        left: 10px;
+      "
+      target="__blank"
+      href="https://codepen.io/yoann-b/full/pozeVYG"
+      >Click here for Full Screen App</a
+    >
+    <div class="container">
+      <div class="device">
+        <div class="exterieur">
+          <div class="button-shutdown"></div>
+          <div class="button-vol-mute"></div>
+          <div class="button-vol-plus"></div>
+          <div class="button-vol-moins"></div>
+        </div>
+        <div class="interieur">
+          <div class="screen top-screen">
+            <div class="camera"></div>
+            <div class="microphone"></div>
+            <div class="microphone-bar"></div>
+          </div>
+          <div id="mainScreen" class="screen middle-screen">
+            <div id="loadingScreen">
+              <i class="fa fa-apple" aria-hidden="true"></i>
+              <div id="loadingBar" class=""></div>
+            </div>
+            <div id="articleScreen"></div>
+            <div id="articleFlou"></div>
+            <div id="articleCard">
+              <img id="articleCardImage" src="" alt="" /><label
+                >Title Card</label
+              >
+              <p id="articleCardParagraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+              </p>
+            </div>
+            <button id="closeArticle">X</button>
+          </div>
+          <div class="screen bottom-screen">
+            <button></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

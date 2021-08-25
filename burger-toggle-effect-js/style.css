@@ -1,0 +1,95 @@
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s;
+  background: -moz-linear-gradient(
+    45deg,
+    #e4f5fc 0%,
+    #9fd8ef 0%,
+    #9fd8ef 4%,
+    #bfe8f9 50%,
+    #2ab0ed 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #e4f5fc 0%,
+    #9fd8ef 0%,
+    #9fd8ef 4%,
+    #bfe8f9 50%,
+    #2ab0ed 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #e4f5fc 0%,
+    #9fd8ef 0%,
+    #9fd8ef 4%,
+    #bfe8f9 50%,
+    #2ab0ed 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4f5fc', endColorstr='#2ab0ed',GradientType=1 );
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
+}
+.burger {
+  width: 90px;
+  height: 90px;
+  display: block;
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.burger > span {
+  display: block;
+  position: relative;
+  width: 90%;
+  height: 10px;
+  margin: 15px auto;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.burger > span#sp1 {
+  transition: all 0.25s 0.45s;
+  background-color: #0b2e3b;
+}
+
+.burger > span#sp2 {
+  transition: all 0.25s 0.25s;
+  background-color: #0b2e3b;
+}
+
+.burger > span#sp3 {
+  transition: all 0.25s 0.09s;
+  background-color: #0b2e3b;
+}
+
+.burger.active > span#sp1 {
+  width: 90%;
+  height: 90%;
+  margin: 5px auto;
+  transition: all 0.25s 0.09s;
+  background-color: transparent;
+}
+
+.burger.active > span#sp2 {
+  background-color: #0b2e3b;
+  transform: translateY(-60px) rotateZ(45deg);
+  transition: all 0.25s 0.25s;
+}
+
+.burger.active > span#sp3 {
+  background-color: #0b2e3b;
+  transform: translateY(-85px) rotateZ(-45deg);
+  transition: all 0.18s 0.35s;
+}
+
+span {
+  background-color: #0b2e3b;
+  color: #0b2e3b;
+}
