@@ -32,13 +32,13 @@ def main():  # sourcery skip: ensure-file-closed, extract-duplicate-method
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>%s</title>
+    <title></title>
 </head>
 <body>
 
 <script src="main.js"></script>
 </body>
-</html>''') % ({html_title})
+</html>''')
     html_file.close()
     css_file = open('style.css', 'w')
     css_file.close()
