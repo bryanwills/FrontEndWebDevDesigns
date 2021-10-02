@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #111;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 1s;
+  clip-path: circle(20.6% at 50% 50%);
+  transform: rotate(45deg);
+}
+
+.container.active {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 1s;
+  clip-path: circle(70.7% at 50% 50%);
+  transform: rotate(0);
+}
+
+.content {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-image: url(img/img1.png);
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+
+.content.two {
+  background-image: url(img/img2.png);
+  left: 50%;
+}
+
+.content.three {
+  background-image: url(img/img3.png);
+  top: 50%;
+}
+
+.content.four {
+  background-image: url(img/img4.png);
+  left: 50%;
+  top: 50%;
+}
+
+.content.big {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  cursor: auto;
+}
+
+.circle {
+  width: 15vw;
+  height: 15vw;
+  background: #111;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  transition: 0.5s;
+}
+
+.circle.hide {
+  width: 0;
+  height: 0;
+}
+
+.content .heading {
+  font-family: roboto, sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15vh;
+  text-align: center;
+  transition: 1s;
+  opacity: 0;
+}
+
+/* toggle btn */
+
+.toggle {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+  display: none;
+}
+
+.toggle span {
+  width: 100%;
+  height: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #000;
+  border: 1px solid #fff;
+}
+
+.toggle span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

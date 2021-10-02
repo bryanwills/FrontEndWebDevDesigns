@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #000;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.toggle-btn span {
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+
+.toggle-btn span:first-child {
+  top: 35%;
+}
+
+.toggle-btn span:last-child {
+  top: 65%;
+}
+
+.toggle-btn.active span:first-child {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.toggle-btn.active span:last-child {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.toggle-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+  padding: 5px;
+}
+
+.link {
+  position: relative;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  text-transform: capitalize;
+  -webkit-text-stroke: 2px #fff;
+  text-shadow: 0 0 10px #fff;
+  z-index: 2;
+  color: transparent;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.link::before,
+.pages::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.link::after,
+.pages::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 97%;
+  height: 95%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: 1s;
+}
+
+.link:hover::after,
+.pages::after {
+  opacity: 1;
+}
+
+.link.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.home,
+.home-page {
+  background: url("img/img1.jpg");
+  background-size: cover;
+  grid-column: span 2;
+}
+
+.project,
+.project-page {
+  background: url("img/img2.jpg");
+  background-size: cover;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.service,
+.service-page {
+  background: url("img/img3.jpg");
+  background-size: cover;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.about,
+.about-page {
+  background: url("img/img4.jpg");
+  background-size: cover;
+}
+
+.contact,
+.contact-page {
+  background: url("img/img5.jpg");
+  background-size: cover;
+}
+
+.page-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: red;
+  opacity: 0;
+  transition: 1s;
+  pointer-events: none;
+}
+
+.page-container.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.pages {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  font-size: 70px;
+  -webkit-text-stroke: 2px #fff;
+  text-shadow: 0 0 10px #fff;
+  text-transform: capitalize;
+  z-index: 2;
+}

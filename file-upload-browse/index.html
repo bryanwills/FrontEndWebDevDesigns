@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>File Upload - Browse using HTML CSS & JavaScript</title>
+  <!-- Font-Awesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+      <div class="icon">
+        <i class="up fas fa-cloud-upload-alt"></i>
+        <i class="close fas fa-times"></i>
+      </div>
+      <div class="text">No file chosen yet!</div>
+      <div class="img">
+        <img src="" alt="">
+      </div>
+      <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)">
+      <label for="file" class="upload">Browse File</label>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

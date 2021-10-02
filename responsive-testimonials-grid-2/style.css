@@ -1,0 +1,65 @@
+.container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60em;
+    *zoom: 1;
+}
+
+.grid-testimonials {
+    overflow: hidden;
+    padding-top: 3.125em;
+}
+
+.grid-testimonials li {
+    float: left;
+    list-style-type: none;
+    padding-bottom: 3.125em;
+}
+
+.grid-testimonials p {
+    line-height: 1.5em;
+    margin: 0;
+}
+
+.grid-testimonials-citation {
+    color: #656262;
+    display: block;
+    font-size: 1.125em;
+    font-weight: 700;
+    margin-top: 2em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.grid-testimonials li div {
+    border: 10px solid #ebebeb;
+    padding: 2.125em 7.638888888888889%;
+    position: relative;
+}
+
+.grid-testimonials .quote-arrow {
+    background: #fff;
+    border-right: 10px solid #ebebeb;
+    border-bottom: 10px solid #ebebeb;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -32px;
+    left: 50%;
+    margin-left: -25px;
+    width: 40px;
+    height: 40px;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+@media screen and (min-width: 50em) {
+    .grid-testimonials li {
+        margin-right: 5%;
+        width: 30%;
+    }
+    .grid-testimonials li:nth-child(3n) {
+        margin-right: 0;
+    }
+}

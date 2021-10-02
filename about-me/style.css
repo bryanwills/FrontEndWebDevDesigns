@@ -1,0 +1,182 @@
+/*Change font*/
+body {
+  font-family: "Share Tech Mono", monospace;
+  margin-left: 250px;
+}
+/**************************************NAVIGATION BAR****************************************/
+/*Navigation bar*/
+#nav-bar {
+  border: 1px solid rgb(207, 212, 212, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 1;
+  overflow: auto;
+  overflow-x: hidden;
+}
+/*VISITOR COUNTER OPACITY*/
+.elfsight-app-77d4c9fc-79ca-48e0-a856-4b05a910a320 {
+  opacity: 0.7;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+li {
+  text-align: center;
+  border-bottom: 1px solid rgb(207, 212, 212, 0.5);
+}
+li a {
+  display: block;
+  color: #000;
+  padding: 4px 10px;
+  text-decoration: none;
+}
+.navicon:hover {
+  background-color: #555;
+  color: white;
+}
+/*Name at top left*/
+#name {
+  text-align: center;
+  font-size: 25px;
+}
+/* let's work together */
+#lastword {
+  color: gray;
+  text-align: center;
+}
+/*************************************BACKGROUND IMAGE****************************************/
+/* Back ground image */
+.demo-bg {
+  opacity: 0.2;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+/*******************************************MAIN CONTENT**************************************/
+/*Main content*/
+#header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/*personal information*/
+#general {
+  position: relative;
+  margin-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* Skill information */
+#skill {
+  position: relative;
+  margin-left: 50px;
+  justify-content: space-between;
+}
+#edu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+  margin-left: 50px;
+  justify-content: space-around;
+  align-self: center;
+}
+#edu img {
+  height: 50px;
+}
+#accredit {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+  margin-left: 50px;
+  justify-content: space-around;
+  text-align: center;
+  align-self: center;
+}
+#accredit img {
+  height: 100px;
+}
+#itemleft {
+  flex: 50%;
+}
+#itemright {
+  flex: 50%;
+}
+#accredit {
+  position: relative;
+  margin-left: 50px;
+  justify-content: space-between;
+}
+#experience {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+  margin-left: 50px;
+  justify-content: space-around;
+  align-self: center;
+}
+/*********************************************SKILL BAR***********************************/
+.skills {
+  text-align: center; /* Right-align text */
+  padding-top: 2px; /* Add top padding */
+  padding-bottom: 2px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+.high {
+  width: 90%;
+  background-color: rgb(0, 128, 0, 0.5);
+} /* Green */
+.mid {
+  width: 75%;
+  background-color: rgb(0, 128, 98, 0.5);
+} /* Green */
+.low {
+  width: 60%;
+  background-color: rgb(60, 0, 128, 0.5);
+} /* Green */
+/* Resize images */
+#skill img {
+  height: 25px;
+}
+#experience img {
+  height: 25px;
+}
+/****************************************Header Img***********************************/
+#header img {
+  width: 60%;
+  border-radius: 50%;
+  border: 20px solid rgb(207, 212, 212);
+  opacity: 0.6;
+}
+#header img:hover {
+  width: 80%;
+  opacity: 0.9;
+  border: 20px solid rgb(207, 212, 212, 0.6);
+}
+/* *********************************************Link hover animation */
+.link:hover {
+  font-size: 110%;
+}
+.link a:link,
+.link a:visited,
+.link a:active {
+  text-decoration: none;
+  color: #01470e;
+}
+/*****************************************p indent************************/
+#experience p {
+  margin-left: 10px;
+}

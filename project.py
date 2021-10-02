@@ -4,7 +4,7 @@ import time
 import os
 
 
-def main():
+def main():  # sourcery skip: ensure-file-closed, extract-duplicate-method
     project_name = input("Enter project name :")
     baseurl = "/Users/bryanwills/code/examples"
     print("Creating project structure...")
@@ -21,6 +21,9 @@ def main():
     print("Creating project image directory...")
     os.mkdir("img", 0o0755)
     time.sleep(1.5)
+    html_file_name = "Project title is: {}".format(project_name)
+    print(html_file_name)
+    html_title = {'title': 'html_file_name'}
     html_file = open('index.html', 'w')
     html_file.write('''<!DOCTYPE html>
 <html lang="en">
@@ -29,13 +32,13 @@ def main():
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>%s</title>
 </head>
 <body>
 
 <script src="main.js"></script>
 </body>
-</html>''')
+</html>''') % ({html_title})
     html_file.close()
     css_file = open('style.css', 'w')
     css_file.close()

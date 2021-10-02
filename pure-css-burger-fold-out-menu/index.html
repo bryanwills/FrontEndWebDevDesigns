@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pure CSS Hamburger Fold Out Menu</title>
+  </head>
+  <body>
+    <nav role="navigation">
+      <div id="menuToggle">
+        <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+        <input type="checkbox" />
+
+        <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+        <ul id="menu">
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>About</li></a>
+          <a href="#"><li>Info</li></a>
+          <a href="#"><li>Contact</li></a>
+          <a href="https://bryanwills.dev" target="_blank"
+            ><li>Show me more</li></a
+          >
+        </ul>
+      </div>
+    </nav>
+    <script src="main.js"></script>
+    <footer>
+      Original idea from
+      <a href="https://codepen.io/erikterwan/pen/EVzeRP" target="_blank"
+        >this</a
+      >
+      CodePen.
+    </footer>
+  </body>
+</html>
