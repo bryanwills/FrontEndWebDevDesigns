@@ -1,0 +1,10 @@
+module.exports = {
+    plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+        require('postcss-100vh-fix'),
+        require('postcss-import'),
+        require('tailwindcss'),
+        require('postcss-100vh-fix'),
+    },
+};
