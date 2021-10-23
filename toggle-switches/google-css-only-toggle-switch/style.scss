@@ -1,0 +1,123 @@
+// Variables
+$blue:#4285f4;
+$yellow:#fBBC05;
+$green: #34A853;
+$red:#EA4335;
+$red-darker:#DE2817;
+$yellow-darker:#DDA703;
+$font: 'product sans',
+sans-serif;
+//Toggle Button
+#toggle {
+    display: none; //Fix this since screenreaders can't see
+}
+
+label {
+    display: inline-block;
+    background: $red-darker;
+    width: 1em;
+    height: 0.5em;
+    border-radius: 0.4em;
+    -webkit-border-radius: 0.4em;
+    -moz-border-radius: 0.4em;
+    -ms-border-radius: 0.4em;
+    -o-border-radius: 0.4em;
+    margin-left: 0.05em;
+    position: relative;
+    cursor: pointer;
+}
+
+#switch {
+    position: absolute;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+    background: $red;
+    box-shadow: 5px 0px 28px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 0.2s ease-in;
+    -webkit-transition: transform 0.2s ease-in;
+    -moz-transition: transform 0.2s ease-in;
+    -ms-transition: transform 0.2s ease-in;
+    -o-transition: transform 0.2s ease-in;
+}
+
+//Layout
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+//Letter spacing
+span {
+    font-weight: 600;
+    color: $red;
+}
+
+.upperg {
+    font-size: 1.1 em;
+    float: left;
+}
+
+.g {
+    margin-left: 0.1em;
+}
+
+.e {
+    transform: rotate(345deg);
+    -webkit-transform: rotate(345deg);
+    -moz-transform: rotate(345deg);
+    -ms-transform: rotate(345deg);
+    -o-transform: rotate(345deg);
+    display: inline-block;
+}
+
+// Backbone
+body {
+    font-family: $font;
+    font-size: 13vw;
+}
+
+//Checked
+#toggle:checked~label #switch {
+    transform: translateX(0.5em);
+    -webkit-transform: translateX(0.5em);
+    -moz-transform: translateX(0.5em);
+    -ms-transform: translateX(0.5em);
+    -o-transform: translateX(0.5em);
+    background: $yellow;
+    box-shadow: -5px 0px 28px -9px rgba(0, 0, 0, 0.75);
+}
+
+#toggle:checked~label {
+    background: $yellow;
+}
+
+#toggle:checked~.blue {
+    color: $blue;
+}
+
+#toggle:checked~.green {
+    color: $green;
+}
+
+#toggle:checked~.red {
+    color: $red;
+}
+
+span {
+    transition: color 0.2s ease-in;
+    -webkit-transition: color 0.2s ease-in;
+    -moz-transition: color 0.2s ease-in;
+    -ms-transition: color 0.2s ease-in;
+    -o-transition: color 0.2s ease-in;
+}
