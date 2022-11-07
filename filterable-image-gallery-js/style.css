@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #eee;
+}
+
+.portfolioContainer {
+    max-width: 1400px;
+    min-height: 100vh;
+    margin: 0px auto;
+    padding: 30px 8%;
+}
+
+header.title {
+    max-width: 700px;
+    margin: 0px auto;
+    padding: 0px 0px 20px 0px;
+    text-align: center;
+}
+
+header.title h1{
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+section.btns {
+    padding: 20px 0px 25px;
+}
+
+section.btns ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+section.btns ul li{
+    display: inline-block;
+    padding: 3px 0px;
+    font-size: 20px;
+    font-weight: 0500;
+    color: #999;
+    letter-spacing: 1px;
+    margin: 4px 15px;
+    cursor: pointer;
+    transition: color 0.4s;
+}
+
+section.btns ul li:hover{
+    color: dodgerblue;
+}
+
+section.btns ul li.active{
+    position: relative;
+    color: dodgerblue;
+}
+
+section.btns ul li.active::after{
+    content: '';
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: dodgerblue;
+    animation: animate 0.4s linear;
+}
+
+@keyframes animate{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+section.gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+section.gallery .card{
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+section.gallery .card.hide{
+    display: none;
+}
+
+section.gallery .card.active{
+    display: block;
+}
+
+.card .imgBox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card .imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.4s;
+}
+
+.card:hover .imgBox img{
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.card .imgText{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imgText h2, .imgText p{
+    padding: 20px 10%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s linear,
+                padding 0.3s linear;
+}
+
+.card:hover .imgText h2, .card:hover .imgText p{
+    opacity: 1;
+    padding: 8px 10%;
+}
+
+@media(max-width: 1024px){
+    section.gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px){
+    section.gallery{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header.title{
+        padding: 0px 0px 10px 0px;
+    }
+    section.btns ul li{
+        font-size: 8px;
+    }
+}
